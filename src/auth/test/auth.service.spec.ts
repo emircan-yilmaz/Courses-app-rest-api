@@ -10,6 +10,7 @@ import { jwtConstants } from '../constants';
 import { JwtStrategy } from '../jwt.strategy';
 import { RolesGuard } from '../roles.guard';
 import { MongooseModule } from '@nestjs/mongoose';
+import generateString from 'src/utils';
 
 describe('AuthService', () => {
   let authService: AuthService;
@@ -48,20 +49,6 @@ describe('AuthService', () => {
   });
 
   describe('Sign up', () => {
-    function generateString(length) {
-      const characters =
-        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      let result = ' ';
-      const charactersLength = characters.length;
-      for (let i = 0; i < length; i++) {
-        result += characters.charAt(
-          Math.floor(Math.random() * charactersLength),
-        );
-      }
-
-      return result;
-    }
-
     it('should sign up user', async () => {
       const dto = {
         username: generateString(4),

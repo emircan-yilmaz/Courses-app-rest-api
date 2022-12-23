@@ -13,7 +13,7 @@ export class CourseService {
     const data = await this.Course.find();
 
     return {
-      length: data.length,
+      results: data.length,
       courses: data,
     };
   }
