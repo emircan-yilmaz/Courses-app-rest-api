@@ -25,7 +25,7 @@ export class UserService {
     const data = await this.User.find();
 
     return {
-      length: data.length,
+      results: data.length,
       users: data,
     };
   }

@@ -1,13 +1,11 @@
-import { forwardRef } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { jwtConstants } from '../../auth/constants';
 import { MongooseModule } from '@nestjs/mongoose';
-import { CoursesModule } from '../courses.module';
 import { CourseController } from '../courses.controller';
 import { CourseService } from '../courses.service';
 import CourseSchema from '../schemas/courses.schema';
-import { PassportModule } from '@nestjs/passport';
 import generateString from '../../utils';
+import { AuthModule } from '../../auth/auth.module';
 
 describe('CourseService', () => {
   let courseService: CourseService;
@@ -17,10 +15,7 @@ describe('CourseService', () => {
       imports: [
         MongooseModule.forRoot(jwtConstants.DATABASE),
         MongooseModule.forFeature([{ name: 'Course', schema: CourseSchema }]),
-        forwardRef(() => CoursesModule),
-        PassportModule.register({
-          defaultStrategy: 'jwt',
-        }),
+        AuthModule,
       ],
       controllers: [CourseController],
       providers: [CourseService],
