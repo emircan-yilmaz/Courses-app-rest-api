@@ -166,8 +166,8 @@ describe('CourseService', () => {
       const id = '63937cd245265cc01cebd128';
       const update: updatePasswordDto = {
         oldPassword: 'test1234',
-        newPassword: 'test12345',
-        correctNewPassword: 'test12345',
+        newPassword: 'test1234',
+        correctNewPassword: 'test1234',
       };
 
       const user = await userService.getUser(id);

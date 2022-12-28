@@ -1,4 +1,4 @@
-import { IsOptional, MaxLength, MinLength } from 'class-validator';
+import { IsEmpty, IsOptional, MaxLength, MinLength } from 'class-validator';
 
 export class updateMeDto {
   @IsOptional()
@@ -15,4 +15,7 @@ export class updateMeDto {
   @MaxLength(50)
   @MinLength(2)
   surname?: string;
+
+  @IsEmpty()
+  password?: string;
 }

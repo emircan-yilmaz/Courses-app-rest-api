@@ -1,22 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { CoursesModule } from '../src/courses/courses.module';
-import { MongooseModule } from '@nestjs/mongoose';
-import { jwtConstants } from '../src/auth/constants';
-import CourseSchema from '../src/courses/schemas/courses.schema';
 import generateString from '../src/utils';
+import { AppModule } from '../src/app.module';
 
 describe('AppController (e2e)', () => {
   let courses: INestApplication;
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [
-        MongooseModule.forRoot(jwtConstants.DATABASE),
-        MongooseModule.forFeature([{ name: 'Course', schema: CourseSchema }]),
-        CoursesModule,
-      ],
+      imports: [AppModule],
     }).compile();
 
     courses = moduleFixture.createNestApplication();
