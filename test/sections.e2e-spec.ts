@@ -17,7 +17,7 @@ describe('SectionsModuleController (e2e)', () => {
   });
 
   describe('(GET)', () => {
-    it('/sections/courses/:courseId', () => {
+    it('/sections/courses/:courseId, should get all sections of the course', () => {
       return request(sections.getHttpServer())
         .get('/sections/courses/62d933f8e96aad5f8dda6bb0')
         .expect(200);
@@ -29,7 +29,7 @@ describe('SectionsModuleController (e2e)', () => {
         .expect(404);
     });
 
-    it('/sections/:id', () => {
+    it('/sections/:id, should get section', () => {
       return request(sections.getHttpServer())
         .get('/sections/62d93434e96aad5f8dda6bb5')
         .expect(200);
@@ -43,7 +43,7 @@ describe('SectionsModuleController (e2e)', () => {
   });
 
   describe('(POST)', () => {
-    it('/sections/courses/:courseId', () => {
+    it('/sections/courses/:courseId, should create section', () => {
       const login = {
         username: 'admin',
         password: 'test1234',
@@ -133,7 +133,7 @@ describe('SectionsModuleController (e2e)', () => {
   });
 
   describe('(PATCH)', () => {
-    it('/sections/:sectionId/courses/:courseId', () => {
+    it('/sections/:sectionId/courses/:courseId, should update section', () => {
       const login = {
         username: 'admin',
         password: 'test1234',
@@ -255,7 +255,7 @@ describe('SectionsModuleController (e2e)', () => {
   });
 
   describe('(DELETE)', () => {
-    it('/sections/courses/:courseId', () => {
+    it('/sections/courses/:courseId, should delete section', () => {
       const login = {
         username: 'admin',
         password: 'test1234',

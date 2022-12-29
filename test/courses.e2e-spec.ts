@@ -17,17 +17,17 @@ describe('CoursesModuleController (e2e)', () => {
   });
 
   describe('(GET)', () => {
-    it('/courses', () => {
+    it('/courses, should get courses', () => {
       return request(courses.getHttpServer()).get('/courses').expect(200);
     });
 
-    it('/courses/:id', () => {
+    it('/courses/:id, should get course', () => {
       return request(courses.getHttpServer())
         .get('/courses/62d933f8e96aad5f8dda6bb0')
         .expect(200);
     });
 
-    it('/courses/:id, course does not exists, should give an error', () => {
+    it('/courses/:id, should give not found error, course does not exist', () => {
       return request(courses.getHttpServer())
         .get('/courses/62d933f8e96aad5f8dda6baa')
         .expect(404);
@@ -35,7 +35,7 @@ describe('CoursesModuleController (e2e)', () => {
   });
 
   describe('(POST)', () => {
-    it('/courses', () => {
+    it('/courses, should create course', () => {
       const login = {
         username: 'admin',
         password: 'test1234',
@@ -148,7 +148,7 @@ describe('CoursesModuleController (e2e)', () => {
   });
 
   describe('(PATCH)', () => {
-    it('/courses/:id', () => {
+    it('/courses/:id, should update course', () => {
       const login = {
         username: 'admin',
         password: 'test1234',
@@ -264,7 +264,7 @@ describe('CoursesModuleController (e2e)', () => {
   });
 
   describe('(DELETE)', () => {
-    it('/courses/:id', () => {
+    it('/courses/:id, should delete course', () => {
       const login = {
         username: 'admin',
         password: 'test1234',

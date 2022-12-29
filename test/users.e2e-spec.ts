@@ -17,7 +17,7 @@ describe('UsersModuleController (e2e)', () => {
   });
 
   describe('(GET)', () => {
-    it('/users', () => {
+    it('/users, should get all users', () => {
       const login = {
         username: 'admin',
         password: 'test1234',
@@ -34,7 +34,7 @@ describe('UsersModuleController (e2e)', () => {
         });
     });
 
-    it('/users/:id', () => {
+    it('/users/:id, should get user', () => {
       const login = {
         username: 'admin',
         password: 'test1234',
@@ -87,7 +87,7 @@ describe('UsersModuleController (e2e)', () => {
   });
 
   describe('(POST)', () => {
-    it('/users', () => {
+    it('/users, should create user', () => {
       const login = {
         username: 'admin',
         password: 'test1234',
@@ -213,7 +213,7 @@ describe('UsersModuleController (e2e)', () => {
   });
 
   describe('(PATCH)', () => {
-    it('/users/:id', () => {
+    it('/users/:id, should update user', () => {
       const login = {
         username: 'admin',
         password: 'test1234',
@@ -415,7 +415,7 @@ describe('UsersModuleController (e2e)', () => {
   });
 
   describe('(DELETE)', () => {
-    it('/users/:id', () => {
+    it('/users/:id, should delete user', () => {
       const login = {
         username: 'admin',
         password: 'test1234',
