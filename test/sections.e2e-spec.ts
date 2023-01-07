@@ -255,7 +255,7 @@ describe('SectionsModuleController (e2e)', () => {
   });
 
   describe('(DELETE)', () => {
-    it('/sections/courses/:courseId, should delete section', () => {
+    it('/sections/:sectionId/courses/:courseId, should delete section', () => {
       const login = {
         username: 'admin',
         password: 'test1234',

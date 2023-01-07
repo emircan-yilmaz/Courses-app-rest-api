@@ -10,7 +10,7 @@ import SectionSchema from '../schema/sections.schema';
 import { VideosRepository } from '../../videos/videos.repository';
 import VideoSchema from '../../videos/schema/videos.schema';
 
-describe('CourseService', () => {
+describe('SectionService', () => {
   let sectionService: SectionService;
 
   beforeEach(async () => {

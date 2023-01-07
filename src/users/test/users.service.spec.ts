@@ -14,7 +14,7 @@ import { updateUserDto } from '../dto/update-user.dto';
 import { updateMeDto } from '../dto/update-me.dto';
 import { updatePasswordDto } from '../dto/update-mypassword.dto';
 
-describe('CourseService', () => {
+describe('UserService', () => {
   let userService: UserService;
 
   beforeEach(async () => {

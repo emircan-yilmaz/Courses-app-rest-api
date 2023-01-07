@@ -13,7 +13,7 @@ import { VideosController } from '../videos.controller';
 import { createVideoDto } from '../dto/create-video.dto';
 import { updateVideoDto } from '../dto/update-vide.dto';
 
-describe('CourseService', () => {
+describe('VideoService', () => {
   let videoService: VideosService;
 
   beforeEach(async () => {

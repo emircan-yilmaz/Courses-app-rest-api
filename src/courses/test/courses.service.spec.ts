@@ -97,7 +97,7 @@ describe('CourseService', () => {
 
   describe('Update Course', () => {
     it('should update course', async () => {
-      const courseId = '63a5f337b5520426ebf45971';
+      const courseId = '63ab5210aec858c8464aaf00';
       const courseInfo = generateString(5);
       const update = {
         description: courseInfo,

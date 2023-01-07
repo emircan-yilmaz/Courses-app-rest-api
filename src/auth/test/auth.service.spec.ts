@@ -10,7 +10,7 @@ import { jwtConstants } from '../constants';
 import { JwtStrategy } from '../jwt.strategy';
 import { RolesGuard } from '../roles.guard';
 import { MongooseModule } from '@nestjs/mongoose';
-import generateString from 'src/utils';
+import generateString from '../../utils';
 
 describe('AuthService', () => {
   let authService: AuthService;
